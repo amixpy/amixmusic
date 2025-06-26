@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AmixMusic</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-code.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <span>AmixMusic</span>
+            </div>
+            <nav>
+                <button class="nav-item active" data-screen="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </button>
+                <button class="nav-item" data-screen="search">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </button>
+                <button class="nav-item" data-screen="library">
+                    <i class="fas fa-music"></i>
+                    <span>Library</span>
+                </button>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div id="home-screen" class="screen active">
+                <div class="recently-played">
+                    <h2>Recently Played</h2>
+                    <div class="song-list" id="recent-songs"></div>
+                </div>
+                <div class="playlists">
+                    <h2>Playlists</h2>
+                    <div class="playlist-grid" id="playlists"></div>
+                </div>
+            </div>
+
+            <div id="search-screen" class="screen">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search songs..." id="search-input">
+                    <button id="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-results" id="search-results"></div>
+            </div>
+
+            <div id="library-screen" class="screen">
+                <div class="library-content">
+                    <div class="songs-list" id="library-songs"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="player">
+            <div class="player-controls">
+                <button class="control-btn" id="prev-btn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="control-btn" id="play-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn" id="next-btn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+            <div class="current-song">
+                <div class="song-info">
+                    <h3 id="current-song-title">No song playing</h3>
+                    <p id="current-song-artist">-</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
